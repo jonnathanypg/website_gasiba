@@ -99,3 +99,6 @@ Este archivo registra todos los cambios, acciones y actualizaciones realizadas e
 *   Incluidos los créditos de "Desarrollado por WEBLIFETECH S.A.S." en el pie de página.
 *   Añadida una nota de investigación y desarrollo por IA en el `README.md`.
 **Tareas Vinculadas:** N/A (Ajustes post-desarrollo principal)| 2026-01-20 | Antigravity | Implementación de sección 'Centros' con carrusel 3D | [Task 26](tasks/task_26_centro_cdi_section.md) |
+| 2026-01-20 | Antigravity | Refinamiento de diseño y formulario de contacto | [Task 27](tasks/task_27_layout_and_form.md) |
+| 2026-01-20 | Antigravity | Ajuste global de responsividad (Tablets/Móviles) | [Task 28](tasks/task_28_global_responsive.md) |
+| 2026-01-20 | Antigravity | Ajustes visuales: Espaciado Hero y Contraste | [Task 29](tasks/task_29_visual_polish.md) |

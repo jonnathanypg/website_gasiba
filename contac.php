@@ -29,29 +29,32 @@ error_reporting( E_ALL & ~E_NOTICE );
 
 try {
 
-	if ( count( $_POST ) == 0 && ! isset($_POST['username'])&& ! isset($_POST['email'])&& ! isset($_POST['message'])) {
-		throw new \Exception( 'Form is empty' );
+	if ( count( $_POST ) == 0 && ! isset($_POST['nombre'])&& ! isset($_POST['email'])&& ! isset($_POST['mensaje'])) {
+		throw new \Exception( 'El formulario está vacío' );
 	}
 
 	// an email address that will be in the From field of the email.
 	$from = $_POST['email'] ;
 	// The message send in email
-	$message = $_POST['message'] ;
+	$message = "Nombre: " . $_POST['nombre'] . "\r\n";
+    $message .= "Email: " . $_POST['email'] . "\r\n";
+    $message .= "Asunto: " . $_POST['asunto'] . "\r\n";
+    $message .= "Mensaje: \r\n" . $_POST['mensaje'] . "\r\n";
+    
 	// subject of the email
-    $subject = $_POST['name'];
-
-
+    $subject = "Contacto Web: " . ($_POST['asunto'] ? $_POST['asunto'] : 'Nuevo Mensaje');
 
 	$headers = 'From: ' . $from . "\r\n" .
 	           'Reply-To: ' . $sendTo . "\r\n" .
-	           'X-Mailer: Blackdsn HTML/' . phpversion();
-
-
+	           'X-Mailer: PHP/' . phpversion();
 
 	// Send email
-	mail( $sendTo, $subject, $message, $headers );
+	if(mail( $sendTo, $subject, $message, $headers )) {
+        $responseArray = array('type' => 'success', 'message' => $okMessage);
+    } else {
+        throw new \Exception('Error sending email');
+    }
 
-	$responseArray = array('type' => 'success', 'message' => $okMessage);
 } catch ( \Exception $e ) {
 	 $responseArray = array('type' => 'danger', 'message' => $errorMessage);
 }
