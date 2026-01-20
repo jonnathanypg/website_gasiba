@@ -98,4 +98,4 @@ Este archivo registra todos los cambios, acciones y actualizaciones realizadas e
 *   Ajustado el espaciado entre los botones CTA en la vista móvil.
 *   Incluidos los créditos de "Desarrollado por WEBLIFETECH S.A.S." en el pie de página.
 *   Añadida una nota de investigación y desarrollo por IA en el `README.md`.
-**Tareas Vinculadas:** N/A (Ajustes post-desarrollo principal)
+**Tareas Vinculadas:** N/A (Ajustes post-desarrollo principal)| 2026-01-20 | Antigravity | Implementación de sección 'Centros' con carrusel 3D | [Task 26](tasks/task_26_centro_cdi_section.md) |

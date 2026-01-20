@@ -910,3 +910,130 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Centros Section */
+.centros {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    overflow: hidden;
+}
+
+.centros-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 968px) {
+    .centros-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.centros-text h3 {
+    font-size: 2rem;
+    font-family: var(--font-display);
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.centros-features {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.centros-features li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.centros-features i {
+    color: var(--color-success);
+    font-size: 1.2rem;
+}
+
+/* 3D Carousel */
+.carousel-container {
+    perspective: 1000px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-3d {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.carousel-stage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    left: 10px;
+    top: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    border: 3px solid white;
+    /* Backface visibility can be hidden if we rotate them */
+    /* backface-visibility: hidden; */ 
+    transition: transform 0.5s;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 10;
+}
+
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    transform: scale(1.1);
+    background: var(--color-primary);
+    color: white;
+}

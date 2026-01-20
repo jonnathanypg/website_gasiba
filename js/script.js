@@ -338,3 +338,89 @@ document.addEventListener('keydown', (e) => {
  konamiCode = [];
  }
 });
+// 3D Carousel Logic
+const initCarousel = () => {
+    const stage = document.querySelector('.carousel-stage');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+
+    if (!stage || items.length === 0) return;
+
+    const numberOfItems = items.length;
+    const itemWidth = 250; // Match CSS width
+    const gap = 20;
+    const theta = 360 / numberOfItems;
+    // Calculate radius to fit items in a circle
+    // Circumference ≈ n * w
+    // r = C / 2π
+    // A bit of spacing is good, so let's use a slightly larger radius or standard formula
+    // r = (w / 2) / tan(π / n)
+    const radius = Math.round((itemWidth + gap) / 2 / Math.tan(Math.PI / numberOfItems));
+
+    // Position items
+    items.forEach((item, index) => {
+        const angle = theta * index;
+        item.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
+        // Add slight opacity to non-front items for depth effect if desired
+        // item.style.opacity = '0.8';
+    });
+
+    // Rotation logic
+    let currRotation = 0;
+
+    const rotateCarousel = (direction) => {
+        if (direction === 'next') {
+            currRotation -= theta;
+        } else {
+            currRotation += theta;
+        }
+        stage.style.transform = `translateZ(-${radius}px) rotateY(${currRotation}deg)`;
+    };
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            rotateCarousel('next');
+            resetAutoRotation();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            rotateCarousel('prev');
+            resetAutoRotation();
+        });
+    }
+
+    // Auto Rotation
+    let autoRotateInterval;
+
+    const startAutoRotation = () => {
+        autoRotateInterval = setInterval(() => {
+            rotateCarousel('next');
+        }, 4000);
+    };
+
+    const resetAutoRotation = () => {
+        clearInterval(autoRotateInterval);
+        startAutoRotation();
+    };
+
+    // Initial setup
+    // Push the stage back by radius so the front item is at z=0 (visual sweet spot)
+    stage.style.transform = `translateZ(-${radius}px) rotateY(0deg)`;
+
+    startAutoRotation();
+
+    // Pause on hover
+    const container = document.querySelector('.carousel-container');
+    if (container) {
+        container.addEventListener('mouseenter', () => clearInterval(autoRotateInterval));
+        container.addEventListener('mouseleave', startAutoRotation);
+    }
+};
+
+// Initialize after DOM load
+document.addEventListener('DOMContentLoaded', () => {
+    initCarousel();
+});
