@@ -1047,7 +1047,7 @@ body {
     display: flex;
     align-items: start;
     gap: 0.8rem;
-    font-size: 1rem;
+    font-size: 12px;
     line-height: 1.4;
 }
 
