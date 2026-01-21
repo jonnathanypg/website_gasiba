@@ -60,18 +60,9 @@ try {
 }
 
 
-// if requested by AJAX request return JSON response
-if ( ! empty( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && strtolower( $_SERVER['HTTP_X_REQUESTED_WITH'] ) == 'xmlhttprequest' ) {
-	$encoded = json_encode( array( 'status' => true, 'message' => $okMessage ) );
+// Return JSON response based on the actual result
+$encoded = json_encode($responseArray);
 
-	header( 'Content-Type: application/json' );
+header('Content-Type: application/json');
 
-	echo $encoded;
-} // else just display the message
-else {
-	$encoded = json_encode( array( 'status' => false, 'message' => $errorMessage ) );
-
-	header( 'Content-Type: application/json' );
-
-	echo $encoded;
-}
+echo $encoded;
