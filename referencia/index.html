@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Website Betatronic | WEBLIFETECH S.A.S.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-teal: #0CACA2;
+            --primary-dark: #00838f;
+            --bg-dark: #0a1628;
+            --bg-gradient: linear-gradient(135deg, #0a1628 0%, #1a2d4a 50%, #0d1f35 100%);
+            --text-light: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.7);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: var(--text-light);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text .accent {
+            color: var(--primary-teal);
+        }
+
+        .header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffffff 0%, #00bcd4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .versions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Version Card */
+        .version-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 35px 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .version-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: skewX(-20deg);
+            transition: left 0.6s ease;
+        }
+
+        .version-card:hover::before {
+            left: 150%;
+        }
+
+        .version-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-teal);
+            box-shadow: 0 20px 50px rgba(0, 188, 212, 0.2);
+        }
+
+        .version-number {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-teal), var(--primary-dark));
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 8px 20px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .version-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-light);
+        }
+
+        .version-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .version-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            border: 2px solid var(--primary-teal);
+            color: var(--primary-teal);
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .version-btn:hover {
+            background: var(--primary-teal);
+            color: var(--bg-dark);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 188, 212, 0.4);
+        }
+
+        .version-btn svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* Developer Credit */
+        .developer-credit {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .developer-credit p {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .developer-credit strong {
+            color: var(--primary-teal);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo img {
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+        }
+
+        .footer-company {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .footer-tagline {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px 30px;
+            }
+
+            .logo-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo-text {
+                font-size: 1.6rem;
+            }
+
+            .versions-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .version-card {
+                padding: 25px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .version-card h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Decorative Background Elements */
+        .bg-glow {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .bg-glow-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary-teal);
+            top: -100px;
+            right: -100px;
+        }
+
+        .bg-glow-2 {
+            width: 300px;
+            height: 300px;
+            background: #0288d1;
+            bottom: -50px;
+            left: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Glows -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="icon-logo-betatronic.webp" alt="Betatronic Logo" class="logo-icon">
+            <span class="logo-text"><span class="accent">BETA</span>TRONIC</span>
+        </div>
+        <h1>Proyecto Website Betatronic</h1>
+        <p>Presentamos cuatro propuestas de diseño para el nuevo sitio web. Explore cada versión y elija el estilo que
+            mejor represente a la marca.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="versions-grid">
+            <!-- Version 1: Coverflow -->
+            <div class="version-card">
+                <span class="version-number">Versión Uno</span>
+                <h3>Elegante Corporativo</h3>
+                <p>Tema oscuro premium con orbes flotantes decorativos, hero minimalista con badge animado y tarjeta
+                    glassmorphism. Galería Coverflow con perspectiva 3D, barra de progreso interactiva y controles
+                    play/pause. Transiciones fluidas en todas las secciones.</p>
+                <a href="version-uno" target="_blank" class="version-btn">
+                    Ver Diseño
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Version 2: Cards -->
+            <div class="version-card">
+                <span class="version-number">Versión Dos</span>
+                <h3>Futurista Tecnológico</h3>
+                <p>Estilo cyberpunk con tipografía Orbitron, fondo animado con cuadrícula de 50px y orbes brillantes.
+                    Hero con llama SVG decorativa. Galería de cartas apiladas 3D con efecto parallax, borde degradado
+                    brillante, navegación por miniaturas y contador dinámico.</p>
+                <a href="version-dos" target="_blank" class="version-btn">
+                    Ver Diseño
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Version 3: Prism -->
+            <div class="version-card">
+                <span class="version-number">Versión Tres</span>
+                <h3>Luminoso Profesional</h3>
+                <p>Diseño en tonos claros con fondos blancos y acentos teal. Formas flotantes decorativas con animación
+                    suave. Hero con tarjeta glassmorphism y texto degradado. Galería Prisma 3D con rotación de caras,
+                    efecto de brillo diagonal en hover e indicadores de línea.</p>
+                <a href="version-tres" target="_blank" class="version-btn">
+                    Ver Diseño
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Version 4: Classic 3D Carousel -->
+            <div class="version-card">
+                <span class="version-number">Versión Cuatro</span>
+                <h3>Inmersivo Premium</h3>
+                <p>Tema dark de alto impacto con hero de imagen de fondo y overlay degradado. Badge animado con punto
+                    pulsante. Carrusel 3D circular infinito con 10 imágenes, etiquetas animadas, efecto de resplandor
+                    diagonal en hover, zonas de clic invisibles y puntos de paginación.</p>
+                <a href="version-cuatro" target="_blank" class="version-btn">
+                    Ver Diseño
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Developer Credit -->
+        <div class="developer-credit">
+            <p>Desarrollado por <strong>Jonnathan Peña</strong></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-company">WEBLIFETECH S.A.S.</p>
+        <p class="footer-tagline">Soluciones Digitales para tu Empresa</p>
+        <p class="footer-copy">© 2026 WEBLIFETECH S.A.S. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

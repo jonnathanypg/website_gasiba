@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BETATRONIC - Soluciones integrales contra incendios</title>
+    <meta name="description"
+        content="Betatronic - Empresa ecuatoriana especializada en sistemas contra incendios. Protegemos lo que más importa con tecnología y precisión.">
+    <meta property="og:title" content="BETATRONIC - Soluciones integrales contra incendios">
+    <meta property="og:description"
+        content="Empresa ecuatoriana especializada en sistemas contra incendios. 30+ años de experiencia.">
+
+    <!-- Fonts: Orbitron for display, Inter for body - Non-blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@300;400;500;600&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="styles3.css" as="style">
+    <link rel="preload" href="slider-cards.css" as="style">
+
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="slider-cards.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar glass" id="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">
+                <img class="logo-icon" src="icon-logo-betatronic.webp" alt="Betatronic Logo" width="40" height="40">
+                <span class="logo-text"><span class="logo-accent">BETA</span>TRONIC</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <button class="nav-link active" data-section="inicio">Inicio</button>
+                <button class="nav-link" data-section="nosotros">Nosotros</button>
+                <button class="nav-link" data-section="servicios">Servicios</button>
+                <button class="nav-link" data-section="contacto">Contacto</button>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+                <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="mobile-link" data-section="inicio">Inicio</button>
+            <button class="mobile-link" data-section="nosotros">Nosotros</button>
+            <button class="mobile-link" data-section="servicios">Servicios</button>
+            <button class="mobile-link" data-section="contacto">Contacto</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero bg-pattern tech-grid">
+            <!-- Animated Background Elements -->
+            <div class="hero-bg-elements">
+                <div class="bg-orb orb-1 animate-pulse-slow"></div>
+                <div class="bg-orb orb-2 animate-pulse-slow"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hero-flame">
+                    <path
+                        d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+                    </path>
+                </svg>
+            </div>
+
+            <div class="hero-content">
+                <div class="fade-in">
+                    <br><br>
+                    <h1 class="hero-title font-display">
+                        <span class="text-white">Soluciones integrales</span>
+                        <br>
+                        <span class="text-gradient">contra incendios</span>
+                        <br>
+                        <span class="text-white-80 smaller">con tecnología y precisión</span>
+                    </h1>
+                </div>
+
+                <div class="fade-in fade-in-delay-1">
+                    <p class="hero-lead">En Betatronic, protegemos lo que más importa.</p>
+                    <p class="hero-text">
+                        Somos una empresa ecuatoriana especializada en sistemas y soluciones contra incendios, orientada
+                        a
+                        garantizar la seguridad de personas, bienes e infraestructuras críticas. Combinamos
+                        conocimientos de
+                        ingeniería, tecnología de punta y cumplimiento normativo riguroso para ofrecer soluciones
+                        confiables, eficientes y sostenibles, adaptadas a las necesidades del sector público, privado e
+                        industrial.
+                    </p>
+                </div>
+
+                <div class="fade-in fade-in-delay-2">
+                    <button class="cta-button" onclick="scrollToSection('servicios')">
+                        <span>Conoce nuestras soluciones</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="scroll-indicator">
+                    <div class="scroll-mouse">
+                        <div class="scroll-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card Stack Photo Slider Section -->
+        <section class="slider-cards-section" id="galeria">
+            <div class="slider-cards-header">
+                <h2>Nuestros <span>Proyectos</span></h2>
+                <p>Descubre la calidad y profesionalismo en cada uno de nuestros trabajos de protección contra incendios
+                </p>
+            </div>
+
+            <div class="slider-cards-wrapper">
+                <div class="slider-cards-container">
+                    <div class="slider-cards-stack">
+                        <div class="slider-card">
+                            <img src="fotografias/betatronic-sistema-contra-incendios.webp" fetchpriority="high"
+                                alt="Sistema contra incendios" width="340" height="450">
+                            <div class="card-content">
+                                <h3>Sistemas Integrados</h3>
+                                <p>Soluciones completas de protección</p>
+                            </div>
+                        </div>
+                        <div class="slider-card">
+                            <img src="fotografias/217A3144-5438-4E77-A707-F612F70C0637.webp" loading="lazy"
+                                alt="Proyecto 1" width="340" height="450">
+                            <div class="card-content">
+                                <h3>Protección Industrial</h3>
+                                <p>Seguridad para plantas industriales</p>
+                            </div>
+                        </div>
+                        <div class="slider-card">
+                            <img src="fotografias/42CAA197-A690-4969-8470-738AB11CE741.webp" loading="lazy"
+                                alt="Proyecto 2" width="340" height="450">
+                            <div class="card-content">
+                                <h3>Detección Avanzada</h3>
+                                <p>Sistemas de alerta temprana</p>
+                            </div>
+                        </div>
+                        <div class="slider-card">
+                            <img src="fotografias/5AB980C1-0397-4F01-84EA-F7F57F4572EA.webp" loading="lazy"
+                                alt="Proyecto 3" width="340" height="450">
+                            <div class="card-content">
+                                <h3>Extinción Automática</h3>
+                                <p>Respuesta inmediata ante incendios</p>
+                            </div>
+                        </div>
+                        <div class="slider-card">
+                            <img src="fotografias/792AA29F-24F1-4D84-A47A-EE067825231F.webp" loading="lazy"
+                                alt="Proyecto 4" width="340" height="450">
+                            <div class="card-content">
+                                <h3>Rociadores NFPA</h3>
+                                <p>Normas internacionales de seguridad</p>
+                            </div>
+                        </div>
+                        <div class="slider-card">
+                            <img src="fotografias/8C014037-3DAA-4C49-B0EF-66B0046AC71D.webp" loading="lazy"
+                                alt="Proyecto 5" width="340" height="450">
+                            <div class="card-content">
+                                <h3>Sistemas Gaseosos</h3>
+                                <p>Tecnología FM-200 y Novec</p>
+                            </div>
+                        </div>
+                        <div class="slider-card">
+                            <img src="fotografias/91C7A779-D7D8-44EA-B56B-FCC88D1E962B.webp" loading="lazy"
+                                alt="Proyecto 6" width="340" height="450">
+                            <div class="card-content">
+                                <h3>Instalación Certificada</h3>
+                                <p>Equipos profesionales calificados</p>
+                            </div>
+                        </div>
+                        <div class="slider-card">
+                            <img src="fotografias/CADD5675-4421-4598-9C49-4C33F3357457.webp" loading="lazy"
+                                alt="Proyecto 7" width="340" height="450">
+                            <div class="card-content">
+                                <h3>Mantenimiento Preventivo</h3>
+                                <p>Servicio continuo y confiable</p>
+                            </div>
+                        </div>
+                        <div class="slider-card">
+                            <img src="fotografias/ECBFBC79-D366-49D2-89C4-17A93F809672.webp" loading="lazy"
+                                alt="Proyecto 8" width="340" height="450">
+                            <div class="card-content">
+                                <h3>Sector Comercial</h3>
+                                <p>Protección para centros comerciales</p>
+                            </div>
+                        </div>
+                        <div class="slider-card">
+                            <img src="fotografias/F31E5123-7118-46E1-8E37-3FDF624833D0.webp" loading="lazy"
+                                alt="Proyecto 9" width="340" height="450">
+                            <div class="card-content">
+                                <h3>Proyectos Especiales</h3>
+                                <p>Soluciones a medida</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="slider-cards-nav prev" aria-label="Anterior">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </button>
+                <button class="slider-cards-nav next" aria-label="Siguiente">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Thumbnail Navigation -->
+            <div class="slider-cards-thumbs">
+                <div class="thumb-item active"><img src="fotografias/betatronic-sistema-contra-incendios.webp"
+                        fetchpriority="high" alt="Thumb 1" width="60" height="60">
+                </div>
+                <div class="thumb-item"><img src="fotografias/217A3144-5438-4E77-A707-F612F70C0637.webp" loading="lazy"
+                        alt="Thumb 2" width="60" height="60"></div>
+                <div class="thumb-item"><img src="fotografias/42CAA197-A690-4969-8470-738AB11CE741.webp" loading="lazy"
+                        alt="Thumb 3" width="60" height="60"></div>
+                <div class="thumb-item"><img src="fotografias/5AB980C1-0397-4F01-84EA-F7F57F4572EA.webp" loading="lazy"
+                        alt="Thumb 4" width="60" height="60"></div>
+                <div class="thumb-item"><img src="fotografias/792AA29F-24F1-4D84-A47A-EE067825231F.webp" loading="lazy"
+                        alt="Thumb 5" width="60" height="60"></div>
+                <div class="thumb-item"><img src="fotografias/8C014037-3DAA-4C49-B0EF-66B0046AC71D.webp" loading="lazy"
+                        alt="Thumb 6" width="60" height="60"></div>
+                <div class="thumb-item"><img src="fotografias/91C7A779-D7D8-44EA-B56B-FCC88D1E962B.webp" loading="lazy"
+                        alt="Thumb 7" width="60" height="60"></div>
+                <div class="thumb-item"><img src="fotografias/CADD5675-4421-4598-9C49-4C33F3357457.webp" loading="lazy"
+                        alt="Thumb 8" width="60" height="60"></div>
+                <div class="thumb-item"><img src="fotografias/ECBFBC79-D366-49D2-89C4-17A93F809672.webp" loading="lazy"
+                        alt="Thumb 9" width="60" height="60"></div>
+                <div class="thumb-item"><img src="fotografias/F31E5123-7118-46E1-8E37-3FDF624833D0.webp" loading="lazy"
+                        alt="Thumb 10" width="60" height="60">
+                </div>
+            </div>
+
+            <!-- Counter -->
+            <div class="slider-cards-counter">
+                <span class="current">01</span>
+                <span class="divider"></span>
+                <span class="total">10</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="nosotros" class="section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2 class="section-title font-display">
+                            <span class="text-gradient neon-line">Ingeniería y tecnología</span>
+                            <br>
+                            <span class="text-white-90">para la prevención y protección</span>
+                        </h2>
+                        <div class="about-text">
+                            <p>Con treinta años de experiencia en el mercado ecuatoriano, Betatronic se ha consolidado
+                                como
+                                un aliado estratégico en la implementación de sistemas contra incendios de alta eficacia
+                                y
+                                eficiencia.</p>
+                            <p>Nuestro equipo técnico está comprometido con la excelencia, la seguridad y la innovación
+                                en
+                                cada proyecto hecho a la medida.</p>
+                            <p>Trabajamos bajo estándares nacionales e internacionales, garantizando la calidad de cada
+                                diseño, instalación y mantenimiento que realizamos.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stats-card glass gradient-border animate-float">
+                            <div class="stats-main">
+                                <div class="stat-number font-display text-gradient">30+</div>
+                                <div class="stat-label">Años de experiencia</div>
+                            </div>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-value">100%</div>
+                                    <div class="stat-desc">Cumplimiento normativo</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">24/7</div>
+                                    <div class="stat-desc">Soporte técnico</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Values Section -->
+                <div class="values-section">
+                    <h3 class="values-title font-display">
+                        <span class="text-gradient">Nuestros Valores</span>
+                    </h3>
+                    <p class="values-intro">En Betatronic, nuestros valores son la base de cada decisión, proyecto y
+                        relación con nuestros clientes:</p>
+
+                    <div class="values-grid">
+                        <div class="perspective-card">
+                            <div class="card-inner glass glass-hover">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <circle cx="12" cy="12" r="6" />
+                                        <circle cx="12" cy="12" r="2" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-display">Compromiso</h4>
+                                <p>Dedicación absoluta a la protección de vidas y bienes.</p>
+                            </div>
+                        </div>
+
+                        <div class="perspective-card">
+                            <div class="card-inner glass glass-hover">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="8" r="6" />
+                                        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-display">Excelencia técnica</h4>
+                                <p>Soluciones con altos estándares de ingeniería y cumplimiento normativo.</p>
+                            </div>
+                        </div>
+
+                        <div class="perspective-card">
+                            <div class="card-inner glass glass-hover">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-display">Integridad</h4>
+                                <p>Transparencia, ética y responsabilidad en todos nuestros procesos.</p>
+                            </div>
+                        </div>
+
+                        <div class="perspective-card">
+                            <div class="card-inner glass glass-hover">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-display">Innovación</h4>
+                                <p>Aplicación constante de tecnología de vanguardia.</p>
+                            </div>
+                        </div>
+
+                        <div class="perspective-card">
+                            <div class="card-inner glass glass-hover">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="8" r="6" />
+                                        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-display">Calidad</h4>
+                                <p>Resultados confiables, seguros y duraderos.</p>
+                            </div>
+                        </div>
+
+                        <div class="perspective-card">
+                            <div class="card-inner glass glass-hover">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-display">Trabajo en equipo</h4>
+                                <p>Colaboración activa con clientes y aliados estratégicos.</p>
+                            </div>
+                        </div>
+
+                        <div class="perspective-card">
+                            <div class="card-inner glass glass-hover">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 0 1 9-9" />
+                                    </svg>
+                                </div>
+                                <h4 class="font-display">Sostenibilidad</h4>
+                                <p>Sistemas eficientes y responsables con el medio ambiente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="section bg-pattern">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title font-display centered">
+                        <span class="text-gradient">Nuestros Servicios</span>
+                    </h2>
+                    <p class="section-lead">Eficacia, eficiencia y responsabilidad como valores principales de nuestros
+                        servicios.</p>
+                    <p class="section-subtitle">Betatronic ofrece soluciones integrales y personalizadas en sistemas de
+                        protección contra incendios. Nuestra experiencia, junto con un enfoque técnico y normativo
+                        riguroso,
+                        nos permite cubrir todas las etapas del proyecto.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="perspective-card">
+                        <div class="card-inner glass glass-hover service-card">
+                            <div class="service-emoji">🔧</div>
+                            <h3 class="font-display">Ingeniería y diseño</h3>
+                            <p>Diseño hidráulico bajo norma NFPA, planificación de sistemas de detección y extinción
+                                automática, estudios técnicos y simulaciones.</p>
+                        </div>
+                    </div>
+
+                    <div class="perspective-card">
+                        <div class="card-inner glass glass-hover service-card">
+                            <div class="service-emoji">🔍</div>
+                            <h3 class="font-display">Sistemas de detección de incendios</h3>
+                            <p>Sistemas analógicos, direccionables y convencionales, integrados con monitoreo, alarmas y
+                                evacuación.</p>
+                        </div>
+                    </div>
+
+                    <div class="perspective-card">
+                        <div class="card-inner glass glass-hover service-card">
+                            <div class="service-emoji">💧</div>
+                            <h3 class="font-display">Sistemas de extinción de incendios</h3>
+                            <p>Rociadores automáticos, redes húmedas y secas, espuma, agentes limpios (FM-200, Novec
+                                1230),
+                                CO₂ y otros sistemas gaseosos.</p>
+                        </div>
+                    </div>
+
+                    <div class="perspective-card">
+                        <div class="card-inner glass glass-hover service-card">
+                            <div class="service-emoji">⚙️</div>
+                            <h3 class="font-display">Instalación y puesta en marcha</h3>
+                            <p>Instalación certificada, pruebas funcionales y entrega de sistemas llave en mano.</p>
+                        </div>
+                    </div>
+
+                    <div class="perspective-card">
+                        <div class="card-inner glass glass-hover service-card">
+                            <div class="service-emoji">🛠️</div>
+                            <h3 class="font-display">Mantenimiento preventivo y correctivo</h3>
+                            <p>Inspecciones técnicas, mantenimiento programado y asistencia rápida ante emergencias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section id="clientes" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title font-display centered">
+                        <span class="text-gradient">Confían en nosotros</span>
+                    </h2>
+                    <p class="section-subtitle">A lo largo de los años, Betatronic ha trabajado con instituciones
+                        públicas,
+                        empresas privadas e industrias en todo el Ecuador. Nuestro compromiso con la calidad y el buen
+                        servicio nos ha convertido en un socio confiable para proyectos de gran envergadura y alto nivel
+                        técnico.</p>
+                </div>
+
+                <div class="clients-container glass gradient-border">
+                    <div class="clients-grid">
+                        <div class="client-placeholder">Logo 1</div>
+                        <div class="client-placeholder">Logo 2</div>
+                        <div class="client-placeholder">Logo 3</div>
+                        <div class="client-placeholder">Logo 4</div>
+                        <div class="client-placeholder">Logo 5</div>
+                        <div class="client-placeholder">Logo 6</div>
+                        <div class="client-placeholder">Logo 7</div>
+                        <div class="client-placeholder">Logo 8</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="section bg-pattern">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title font-display centered">
+                        <span class="text-gradient">Estamos listos para ayudarte</span>
+                        <br>
+                        <span class="text-white-80 smaller">a proteger lo que más importa</span>
+                    </h2>
+                    <p class="section-subtitle">¿Necesitas una evaluación técnica o una propuesta personalizada? Nuestro
+                        equipo de especialistas está disponible para asesorarte en la solución más adecuada para tu
+                        proyecto.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container glass gradient-border">
+                        <h3 class="form-title font-display">Envíanos un mensaje</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Correo electrónico" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="Teléfono">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">Enviar mensaje</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div class="contact-card glass gradient-border glass-hover">
+                            <div class="contact-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="font-display">Dirección</h4>
+                                <p>Alborada XII etapa, Mz 1203, Villa 32</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass gradient-border glass-hover">
+                            <div class="contact-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="font-display">Correo</h4>
+                                <p>asistente.comercial@betatronicsa.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass gradient-border glass-hover">
+                            <div class="contact-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="font-display">Teléfono</h4>
+                                <p>+593 95 946 0638</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass gradient-border glass-hover">
+                            <div class="contact-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="font-display">Horario</h4>
+                                <p>Lunes a viernes</p>
+                                <p>08:30 – 17:30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="icon-logo-betatronic.webp" alt="Betatronic Logo" width="36" height="36">
+                    <span><span class="accent">BETA</span>TRONIC</span>
+                </div>
+                <div class="footer-copy">
+                    © 2026 Betatronic. Todos los derechos reservados.
+                </div>
+                <p class="developer-credit">Development by <a href="https://weblifetech.com" target="_blank"
+                        rel="noopener noreferrer">WEBLIFETECH</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="slider-cards.js"></script>
+    <script src="main3.js"></script>
+</body>
+
+</html>

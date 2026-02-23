@@ -104,3 +104,4 @@ Este archivo registra todos los cambios, acciones y actualizaciones realizadas e
 | 2026-01-20 | Antigravity | Ajustes visuales: Espaciado Hero y Contraste | [Task 29](tasks/task_29_visual_polish.md) |
 | 2026-01-20 | Antigravity | Pulido visual, botones y espaciado | [Task 30](tasks/task_30_visual_polish.md) |
 | 2026-01-20 | Antigravity | Ajustes finales: Colores, Botones sin escala, Layout Centros | [Task 31](tasks/task_31_final_polish.md) |
+| 2026-02-23 | Antigravity | Implementación de Nueva Plantilla V2 (index.html, style_v2.css, script_v2.js) | [Task 32](tasks/task_32_v2_template.md) |
