@@ -15,4 +15,4 @@ Creación de una nueva versión del `index.html`, integrando un diseño más mod
 - El Slider 3D fue mapeado a la sección de Centros de Desarrollo.
 
 ## Conclusión
-Se logró una integración cohesiva del diseño sugerido y el texto original proporcionado, estableciendo una apariencia mucho más dinámica, responsiva e interactiva. Se realizaron ajustes visuales sobre la V2 (espaciados del grid en 'Nuestros Programas', contraste de tipografía en subtítulos, y orden de mobile layout para 'Quiénes Somos'). Queda pendiente la verificación visual final en el navegador.
+Se logró una integración cohesiva del diseño sugerido y el texto original proporcionado, estableciendo una apariencia mucho más dinámica, responsiva e interactiva. Se realizaron ajustes visuales sobre la V2 (espaciados del grid en 'Nuestros Programas', contraste de tipografía en subtítulos, animaciones de cursor inteligentes para temas claros y oscuros, y corrección definitiva del layout móvil para 'Quiénes Somos' y 'Contacto' a una sola columna). Queda pendiente la verificación visual final en el navegador.

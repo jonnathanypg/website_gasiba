@@ -117,7 +117,6 @@ body {
     background: var(--bg-gradient-hero);
     color: var(--c4);
     position: relative;
-    overflow: hidden;
 }
 
 .section-light {
@@ -434,7 +433,6 @@ body {
     position: absolute;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(38, 180, 156, 0.15) 0%, rgba(46, 200, 229, 0.05) 40%, rgba(32, 45, 69, 0) 70%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 0;
@@ -446,7 +444,19 @@ body {
     /* Base transform, gets updated in JS */
 }
 
-.section-dark:hover .cursor-glow {
+.cursor-glow-dark {
+    background: radial-gradient(circle, rgba(38, 180, 156, 0.15) 0%, rgba(46, 200, 229, 0.05) 40%, rgba(32, 45, 69, 0) 70%);
+}
+
+.cursor-glow-light {
+    background: radial-gradient(circle, rgba(231, 140, 59, 0.12) 0%, rgba(205, 171, 37, 0.05) 40%, rgba(251, 251, 251, 0) 70%);
+}
+
+.section-dark:hover .cursor-glow,
+.slider3d-section:hover .cursor-glow,
+footer:hover .cursor-glow,
+.section-light:hover .cursor-glow,
+header:hover .cursor-glow {
     opacity: 1;
 }
 
@@ -527,6 +537,13 @@ body {
     gap: 40px;
 }
 
+/* Grid layout for Contact / Help section V2 */
+.contact-grid-v2 {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+}
+
 @media (max-width: 968px) {
     .about-grid-v2 {
         grid-template-columns: 1fr;
@@ -534,6 +551,10 @@ body {
 
     .about-grid-v2 .about-image {
         order: -1;
+    }
+
+    .contact-grid-v2 {
+        grid-template-columns: 1fr !important;
     }
 }
 
